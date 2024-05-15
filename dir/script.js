@@ -50,17 +50,13 @@ reset_but.addEventListener("click", () => {
 
 boxes.forEach((e, index) => {
   e.addEventListener("click", () => {
-    if (turnO) {
       if (turnO) {
-       
         e.innerText = "X";
         e.classList.add("bg-gray-700");
       } else {
-       
         e.innerText = "O";
         e.classList.add("bg-gray-700");
       }
-    }
     socket.emit("playerMove", index);
     e.disabled = false;
     check();
@@ -69,17 +65,15 @@ boxes.forEach((e, index) => {
 
 socket.on("updateGame", (index) => {
   const box = boxes[index];
-
   if (turnO) {
-    box.innerText = "0";
+    box.innerText = "X";
     turnO = false;
-    text.innerText = `X turn`;
+    text.innerText = `O turn`;
     box.classList.add("bg-gray-700");
   } else {
-    box.innerText = "x";
-    text.innerText = `O turn`;
+    box.innerText = "O";
+    text.innerText = `X turn`;
     turnO = true;
-
     box.classList.add("bg-gray-700");
   }
 
