@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="start_box" class="h-screen w-full bg-black absolute top-0 grid content-center justify-center duration-150">
+        <h1 class="text-white text-center text-3xl pb-3">Tic Tac Toe</h1>
+        <button id="start" class="text-white border border-white px-3 py-2 rounded-lg hover:bg-slate-800">
+            Start Game
+        </button>
+    </div>
+    <div class="w-full h-screen grid content-center justify-center bg-[#000000] text-center text-white text-[20px]">
+        <h1>Let's Play</h1>
+        <div class="h-auto w-[22rem] grid content-center justify-center bg-[#141616] rounded-[10px]">
+            <p class="text-white">Play</p>
+            <div id="main"
+                class="h-[21rem] w-[19.5rem] bg-[#313334] flex flex-wrap justify-center items-center gap-1 rounded-md">
+            </div>
+            <button id="reset"
+                class="px-1 py-1 mx-2 my-2 border border-white rounded-md hover:bg-slate-300 hover:text-black duration-200">
+                Reset
+            </button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
