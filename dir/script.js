@@ -52,11 +52,11 @@ boxes.forEach((e, index) => {
   e.addEventListener("click", () => {
     if (turnO) {
       if (turnO) {
-        text.innerText = `X turn`;
+       
         e.innerText = "X";
         e.classList.add("bg-gray-700");
       } else {
-        text.innerText = `O turn`;
+       
         e.innerText = "O";
         e.classList.add("bg-gray-700");
       }
@@ -73,11 +73,11 @@ socket.on("updateGame", (index) => {
   if (turnO) {
     box.innerText = "0";
     turnO = false;
-    text.innerText = `O turn`;
+    text.innerText = `X turn`;
     box.classList.add("bg-gray-700");
   } else {
     box.innerText = "x";
-    text.innerText = `X turn`;
+    text.innerText = `O turn`;
     turnO = true;
 
     box.classList.add("bg-gray-700");

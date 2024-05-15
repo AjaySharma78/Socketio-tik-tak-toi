@@ -33,4 +33,4 @@ app.use(express.static("./"));
 app.get("/", (req, res) => {
   return res.sendFile("index.html");
 });
-server.listen(9000, () => console.log("server stated"));
+server.listen(3000, () => console.log("server stated"));
